@@ -51,7 +51,7 @@ main = do
     (ekg, store) <- monitorApp
     reqCount <- Metrics.createCounter "http.request_count" store
     let hello = helloApp reqCount
-    let app = mapUrls (mount "hello" hello <|> mountRoot ekg)
+    let app = mapUrls (mount "ekg" ekg <|> mountRoot hello)
     
     counter <- Metrics.createCounter "iterations" store
     label <- Metrics.createLabel "args" store
