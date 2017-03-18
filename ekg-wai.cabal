@@ -54,6 +54,30 @@ library
 
   ghc-options: -Wall
 
+executable wai-ekg-example-basic
+  main-is: Basic.hs
+  hs-source-dirs: examples
+  build-depends:
+    ekg-wai,
+    base,
+    ekg-core,
+    time
+  ghc-options: -Wall -with-rtsopts=-T
+
+executable wai-ekg-example-middleware
+  main-is: Routed.hs
+  hs-source-dirs: examples
+  build-depends:
+    ekg-wai,
+    base,
+    ekg-core,
+    http-types,
+    time,
+    wai,
+    wai-extra,
+    warp
+  ghc-options: -Wall -with-rtsopts=-T
+
 source-repository head
   type:     git
   location: https://github.com/tvh/ekg-wai.git

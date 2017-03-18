@@ -35,6 +35,10 @@ module System.Remote.Monitoring.Wai
     , forkServer
     , forkServerWith
 
+      -- * WAI Applications
+    , serve
+    , monitor
+
       -- * Defining metrics
       -- $userdefined
     , getCounter

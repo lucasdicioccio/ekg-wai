@@ -2,6 +2,8 @@
 
 module System.Remote.Monitoring.Wai.App
     ( startServer
+    , monitor
+    , serve
     ) where
 
 import Control.Monad.IO.Class (liftIO)
