@@ -57,7 +57,7 @@ startServer store host port = do
             defaultSettings
     runSettings conf (monitor store)
 
--- | A handler that can be installed into an existing Snap application.
+-- | A handler that can be installed into an existing WAI application.
 monitor :: Store -> Application
 monitor store req respond = do
     dataDir <- liftIO getDataDir
